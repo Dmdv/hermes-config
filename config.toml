@@ -29,14 +29,14 @@ host = '127.0.0.1'
 port = 3001
 
 [[chains]]
-id = 'cosmoshub-4'
+id = 'akashnet-2'
 type = 'CosmosSdk'
-rpc_addr = 'http://rpc-cosmoshub.freshstaking.com:26657/'
-websocket_addr = 'ws://rpc-cosmoshub.freshstaking.com:26657/websocket'
-grpc_addr = 'https://cosmoshub-grpc.lavenderfive.com/'
+rpc_addr = 'https://rpc-akash.ecostake.com/'
+websocket_addr = 'wss://rpc-akash.ecostake.com/websocket'
+grpc_addr = 'https://akash-grpc.lavenderfive.com/'
 rpc_timeout = '10s'
-account_prefix = 'cosmos'
-key_name = 'keyhub'
+account_prefix = 'akash'
+key_name = 'keyakash'
 key_store_type = 'Test'
 store_prefix = 'ibc'
 default_gas = 100000
@@ -55,27 +55,27 @@ denominator = '3'
 
 [chains.gas_price]
 price = 0.1
-denom = 'uatom'
+denom = 'uakt'
 
 [chains.packet_filter]
 policy = 'allow'
 list = [[
     'transfer',
-    'channel-141',
+    'channel-35',
 ]]
 
 [chains.address_type]
 derivation = 'cosmos'
 
 [[chains]]
-id = 'osmosis-1'
+id = 'juno-1'
 type = 'CosmosSdk'
-rpc_addr = 'https://rpc.osmosis.interbloc.org/'
-websocket_addr = 'wss://rpc.osmosis.interbloc.org/websocket'
-grpc_addr = 'https://osmosis-grpc.lavenderfive.com/'
+rpc_addr = 'http://rpc-juno.freshstaking.com:39657/'
+websocket_addr = 'ws://rpc-juno.freshstaking.com:39657/websocket'
+grpc_addr = 'https://juno-grpc.lavenderfive.com/'
 rpc_timeout = '10s'
-account_prefix = 'osmo'
-key_name = 'keyosmosis'
+account_prefix = 'juno'
+key_name = 'keyjuno'
 key_store_type = 'Test'
 store_prefix = 'ibc'
 default_gas = 100000
@@ -94,13 +94,13 @@ denominator = '3'
 
 [chains.gas_price]
 price = 0.1
-denom = 'uosmo'
+denom = 'ujuno'
 
 [chains.packet_filter]
 policy = 'allow'
 list = [[
     'transfer',
-    'channel-0',
+    'channel-29',
 ]]
 
 [chains.address_type]
