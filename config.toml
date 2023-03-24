@@ -1,15 +1,16 @@
 [global]
 log_level = 'info'
+
 [mode.clients]
 enabled = true
 refresh = true
 misbehaviour = false
 
 [mode.connections]
-enabled = false
+enabled = true
 
 [mode.channels]
-enabled = false
+enabled = true
 
 [mode.packets]
 enabled = true
