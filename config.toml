@@ -59,10 +59,69 @@ denom = 'uakt'
 
 [chains.packet_filter]
 policy = 'allow'
-list = [[
+list = [
+    [
+    'transfer',
+    'channel-17',
+],
+    [
     'transfer',
     'channel-35',
-]]
+],
+    [
+    'transfer',
+    'channel-9',
+],
+]
+
+[chains.address_type]
+derivation = 'cosmos'
+
+[[chains]]
+id = 'cosmoshub-4'
+type = 'CosmosSdk'
+rpc_addr = 'https://rpc-cosmoshub.ecostake.com/'
+websocket_addr = 'wss://rpc-cosmoshub.ecostake.com/websocket'
+grpc_addr = 'https://cosmoshub-grpc.lavenderfive.com/'
+rpc_timeout = '10s'
+account_prefix = 'cosmos'
+key_name = 'keyhub'
+key_store_type = 'Test'
+store_prefix = 'ibc'
+default_gas = 100000
+max_gas = 400000
+gas_multiplier = 1.1
+max_msg_num = 30
+max_tx_size = 180000
+clock_drift = '5s'
+max_block_time = '30s'
+memo_prefix = ''
+sequential_batch_tx = false
+
+[chains.trust_threshold]
+numerator = '1'
+denominator = '3'
+
+[chains.gas_price]
+price = 0.1
+denom = 'uatom'
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+    [
+    'transfer',
+    'channel-184',
+],
+    [
+    'transfer',
+    'channel-207',
+],
+    [
+    'transfer',
+    'channel-141',
+],
+]
 
 [chains.address_type]
 derivation = 'cosmos'
@@ -98,10 +157,77 @@ denom = 'ujuno'
 
 [chains.packet_filter]
 policy = 'allow'
-list = [[
+list = [
+    [
     'transfer',
     'channel-29',
-]]
+],
+    [
+    'transfer',
+    'channel-1',
+],
+    [
+    'transfer',
+    'channel-0',
+],
+    [
+    'wasm.juno1v4887y83d6g28puzvt8cl0f3cdhd3y6y9mpysnsp3k8krdm7l6jqgm0rkn',
+    'channel-47',
+],
+]
+
+[chains.address_type]
+derivation = 'cosmos'
+
+[[chains]]
+id = 'osmosis-1'
+type = 'CosmosSdk'
+rpc_addr = 'https://rpc.osmosis.interbloc.org/'
+websocket_addr = 'wss://rpc.osmosis.interbloc.org/websocket'
+grpc_addr = 'https://osmosis-grpc.lavenderfive.com/'
+rpc_timeout = '10s'
+account_prefix = 'osmo'
+key_name = 'keyosmosis'
+key_store_type = 'Test'
+store_prefix = 'ibc'
+default_gas = 100000
+max_gas = 400000
+gas_multiplier = 1.1
+max_msg_num = 30
+max_tx_size = 180000
+clock_drift = '5s'
+max_block_time = '30s'
+memo_prefix = ''
+sequential_batch_tx = false
+
+[chains.trust_threshold]
+numerator = '1'
+denominator = '3'
+
+[chains.gas_price]
+price = 0.1
+denom = 'uosmo'
+
+[chains.packet_filter]
+policy = 'allow'
+list = [
+    [
+    'transfer',
+    'channel-1',
+],
+    [
+    'transfer',
+    'channel-0',
+],
+    [
+    'transfer',
+    'channel-42',
+],
+    [
+    'transfer',
+    'channel-169',
+],
+]
 
 [chains.address_type]
 derivation = 'cosmos'
