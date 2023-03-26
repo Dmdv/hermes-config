@@ -1,5 +1,5 @@
 [global]
-log_level = 'info'
+log_level = 'debug'
 
 [mode.clients]
 enabled = true
@@ -232,4 +232,3 @@ list = [
 
 [chains.address_type]
 derivation = 'cosmos'
-
