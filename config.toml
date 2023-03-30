@@ -1,6 +1,5 @@
 [global]
-log_level = 'debug'
-
+log_level = 'trace'
 [mode.clients]
 enabled = true
 refresh = true
@@ -20,118 +19,20 @@ tx_confirmation = false
 auto_register_counterparty_payee = false
 
 [rest]
-enabled = false
+enabled = true
 host = '127.0.0.1'
 port = 3000
 
 [telemetry]
-enabled = false
+enabled = true
 host = '127.0.0.1'
 port = 3001
 
 [[chains]]
-id = 'akashnet-2'
-type = 'CosmosSdk'
-rpc_addr = 'https://rpc-akash.ecostake.com/'
-websocket_addr = 'wss://rpc-akash.ecostake.com/websocket'
-grpc_addr = 'https://akash-grpc.lavenderfive.com/'
-rpc_timeout = '10s'
-account_prefix = 'akash'
-key_name = 'keyakash'
-key_store_type = 'Test'
-store_prefix = 'ibc'
-default_gas = 100000
-max_gas = 400000
-gas_multiplier = 1.1
-max_msg_num = 30
-max_tx_size = 180000
-clock_drift = '5s'
-max_block_time = '30s'
-memo_prefix = ''
-sequential_batch_tx = false
-
-[chains.trust_threshold]
-numerator = '1'
-denominator = '3'
-
-[chains.gas_price]
-price = 0.1
-denom = 'uakt'
-
-[chains.packet_filter]
-policy = 'allow'
-list = [
-    [
-    'transfer',
-    'channel-17',
-],
-    [
-    'transfer',
-    'channel-35',
-],
-    [
-    'transfer',
-    'channel-9',
-],
-]
-
-[chains.address_type]
-derivation = 'cosmos'
-
-[[chains]]
-id = 'cosmoshub-4'
-type = 'CosmosSdk'
-rpc_addr = 'https://rpc-cosmoshub.ecostake.com/'
-websocket_addr = 'wss://rpc-cosmoshub.ecostake.com/websocket'
-grpc_addr = 'https://cosmoshub-grpc.lavenderfive.com/'
-rpc_timeout = '10s'
-account_prefix = 'cosmos'
-key_name = 'keyhub'
-key_store_type = 'Test'
-store_prefix = 'ibc'
-default_gas = 100000
-max_gas = 400000
-gas_multiplier = 1.1
-max_msg_num = 30
-max_tx_size = 180000
-clock_drift = '5s'
-max_block_time = '30s'
-memo_prefix = ''
-sequential_batch_tx = false
-
-[chains.trust_threshold]
-numerator = '1'
-denominator = '3'
-
-[chains.gas_price]
-price = 0.1
-denom = 'uatom'
-
-[chains.packet_filter]
-policy = 'allow'
-list = [
-    [
-    'transfer',
-    'channel-184',
-],
-    [
-    'transfer',
-    'channel-207',
-],
-    [
-    'transfer',
-    'channel-141',
-],
-]
-
-[chains.address_type]
-derivation = 'cosmos'
-
-[[chains]]
 id = 'juno-1'
 type = 'CosmosSdk'
-rpc_addr = 'http://rpc-juno.freshstaking.com:39657/'
-websocket_addr = 'ws://rpc-juno.freshstaking.com:39657/websocket'
+rpc_addr = 'https://juno-rpc.polkachu.com/'
+websocket_addr = 'wss://rpc.juno.kingnodes.com/websocket'
 grpc_addr = 'https://juno-grpc.lavenderfive.com/'
 rpc_timeout = '10s'
 account_prefix = 'juno'
@@ -139,7 +40,7 @@ key_name = 'keyjuno'
 key_store_type = 'Test'
 store_prefix = 'ibc'
 default_gas = 100000
-max_gas = 400000
+max_gas = 800000
 gas_multiplier = 1.1
 max_msg_num = 30
 max_tx_size = 180000
@@ -157,42 +58,24 @@ price = 0.1
 denom = 'ujuno'
 
 [chains.packet_filter]
-policy = 'allow'
-list = [
-    [
-    'transfer',
-    'channel-29',
-],
-    [
-    'transfer',
-    'channel-1',
-],
-    [
-    'transfer',
-    'channel-0',
-],
-    [
-    'wasm.juno1v4887y83d6g28puzvt8cl0f3cdhd3y6y9mpysnsp3k8krdm7l6jqgm0rkn',
-    'channel-47',
-],
-]
+policy = 'allowall'
 
 [chains.address_type]
 derivation = 'cosmos'
 
 [[chains]]
-id = 'osmosis-1'
+id = 'umee-1'
 type = 'CosmosSdk'
-rpc_addr = 'https://rpc.osmosis.interbloc.org/'
-websocket_addr = 'wss://rpc.osmosis.interbloc.org/websocket'
-grpc_addr = 'https://osmosis-grpc.lavenderfive.com/'
+rpc_addr = 'http://rpc-umee-0.node75.org:26657/'
+websocket_addr = 'ws://rpc-umee-0.node75.org:26657/websocket'
+grpc_addr = 'https://grpc-umee-ia.cosmosia.notional.ventures/'
 rpc_timeout = '10s'
-account_prefix = 'osmo'
-key_name = 'keyosmosis'
+account_prefix = 'umee'
+key_name = 'keyumee'
 key_store_type = 'Test'
 store_prefix = 'ibc'
 default_gas = 100000
-max_gas = 400000
+max_gas = 800000
 gas_multiplier = 1.1
 max_msg_num = 30
 max_tx_size = 180000
@@ -207,28 +90,11 @@ denominator = '3'
 
 [chains.gas_price]
 price = 0.1
-denom = 'uosmo'
+denom = 'uumee'
 
 [chains.packet_filter]
-policy = 'allow'
-list = [
-    [
-    'transfer',
-    'channel-1',
-],
-    [
-    'transfer',
-    'channel-0',
-],
-    [
-    'transfer',
-    'channel-42',
-],
-    [
-    'transfer',
-    'channel-169',
-],
-]
+policy = 'allowall'
 
 [chains.address_type]
 derivation = 'cosmos'
+
