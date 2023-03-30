@@ -1,0 +1,144 @@
+~/.hermes ❯❯❯ hermes create client --host-chain umee-1 --reference-chain juno-1                                                                                                           (base)  master ✚ ✱
+2023-03-28T14:57:32.254655Z  INFO ThreadId(01) using default configuration from '/Users/dima/.hermes/config.toml'
+2023-03-28T14:57:32.255075Z  INFO ThreadId(01) running Hermes v1.3.0
+2023-03-28T14:57:37.325588Z TRACE ThreadId(11) light client verification trusted=1-7588268 target=1-7588268
+2023-03-28T14:57:43.317643Z DEBUG ThreadId(21) send_messages_and_wait_commit{chain=umee-1 tracking_id=create client}: sending 1 messages as 1 batches to chain umee-1 in parallel
+2023-03-28T14:57:43.317728Z DEBUG ThreadId(21) send_messages_and_wait_commit{chain=umee-1 tracking_id=create client}:send_tx_with_account_sequence_retry{chain=umee-1 account.sequence=1}: max fee, for use in tx simulation: Fee { amount: "60001uumee", gas_limit: 600000 }
+2023-03-28T14:57:44.350926Z DEBUG ThreadId(21) send_messages_and_wait_commit{chain=umee-1 tracking_id=create client}:send_tx_with_account_sequence_retry{chain=umee-1 account.sequence=1}:estimate_gas: tx simulation successful, gas amount used: 95305
+2023-03-28T14:57:44.351063Z DEBUG ThreadId(21) send_messages_and_wait_commit{chain=umee-1 tracking_id=create client}:send_tx_with_account_sequence_retry{chain=umee-1 account.sequence=1}: send_tx: using 95305 gas, fee Fee { amount: "10484uumee", gas_limit: 104835 } id=umee-1
+2023-03-28T14:57:44.748849Z DEBUG ThreadId(21) send_messages_and_wait_commit{chain=umee-1 tracking_id=create client}:send_tx_with_account_sequence_retry{chain=umee-1 account.sequence=1}: gas estimation succeeded
+2023-03-28T14:57:44.748926Z DEBUG ThreadId(21) send_messages_and_wait_commit{chain=umee-1 tracking_id=create client}:send_tx_with_account_sequence_retry{chain=umee-1 account.sequence=1}: tx was successfully broadcasted, increasing account sequence number response=Response { code: Ok, data: b"", log: "[]", hash: Hash::Sha256(1050C66358E90ABDCAB073E2EBF64D9E947F9C5FE8EB753EA2FD7649EAEC0255) } account.sequence.old=1 account.sequence.new=2
+2023-03-28T14:57:44.749029Z DEBUG ThreadId(21) send_messages_and_wait_commit{chain=umee-1 tracking_id=create client}: wait_for_block_commits: waiting for commit of tx hashes(s) 1050C66358E90ABDCAB073E2EBF64D9E947F9C5FE8EB753EA2FD7649EAEC0255 id=umee-1
+2023-03-28T14:57:47.745635Z TRACE ThreadId(21) send_messages_and_wait_commit{chain=umee-1 tracking_id=create client}: wait_for_block_commits: retrieved 1 tx results after 2996ms id=umee-1
+SUCCESS CreateClient(
+    CreateClient(
+        Attributes {
+            client_id: ClientId(
+                "07-tendermint-171",
+            ),
+            client_type: Tendermint,
+            consensus_height: Height {
+                revision: 1,
+                height: 7588268,
+            },
+        },
+    ),
+)
+
+~/.hermes ❯❯❯ hermes create client --host-chain juno-1 --reference-chain umee-1                                                                                                             (base)  master ✚
+2023-03-28T14:59:11.074811Z  INFO ThreadId(01) using default configuration from '/Users/dima/.hermes/config.toml'
+2023-03-28T14:59:11.075170Z  INFO ThreadId(01) running Hermes v1.3.0
+2023-03-28T14:59:14.183834Z TRACE ThreadId(11) light client verification trusted=1-5844132 target=1-5844132
+2023-03-28T14:59:17.460773Z DEBUG ThreadId(21) send_messages_and_wait_commit{chain=juno-1 tracking_id=create client}: sending 1 messages as 1 batches to chain juno-1 in parallel
+2023-03-28T14:59:17.460892Z DEBUG ThreadId(21) send_messages_and_wait_commit{chain=juno-1 tracking_id=create client}:send_tx_with_account_sequence_retry{chain=juno-1 account.sequence=9}: max fee, for use in tx simulation: Fee { amount: "60001ujuno", gas_limit: 600000 }
+2023-03-28T14:59:18.796446Z DEBUG ThreadId(21) send_messages_and_wait_commit{chain=juno-1 tracking_id=create client}:send_tx_with_account_sequence_retry{chain=juno-1 account.sequence=9}:estimate_gas: tx simulation successful, gas amount used: 93908
+2023-03-28T14:59:18.796559Z DEBUG ThreadId(21) send_messages_and_wait_commit{chain=juno-1 tracking_id=create client}:send_tx_with_account_sequence_retry{chain=juno-1 account.sequence=9}: send_tx: using 93908 gas, fee Fee { amount: "10330ujuno", gas_limit: 103298 } id=juno-1
+2023-03-28T14:59:19.585242Z DEBUG ThreadId(21) send_messages_and_wait_commit{chain=juno-1 tracking_id=create client}:send_tx_with_account_sequence_retry{chain=juno-1 account.sequence=9}: gas estimation succeeded
+2023-03-28T14:59:19.585333Z DEBUG ThreadId(21) send_messages_and_wait_commit{chain=juno-1 tracking_id=create client}:send_tx_with_account_sequence_retry{chain=juno-1 account.sequence=9}: tx was successfully broadcasted, increasing account sequence number response=Response { code: Ok, data: b"", log: "[]", hash: Hash::Sha256(D37914B858AEBDC670FADD1F2BB47CE9303C0543048D9FFD4956E78BF0C85BE4) } account.sequence.old=9 account.sequence.new=10
+2023-03-28T14:59:19.585429Z DEBUG ThreadId(21) send_messages_and_wait_commit{chain=juno-1 tracking_id=create client}: wait_for_block_commits: waiting for commit of tx hashes(s) D37914B858AEBDC670FADD1F2BB47CE9303C0543048D9FFD4956E78BF0C85BE4 id=juno-1
+2023-03-28T14:59:25.924319Z TRACE ThreadId(21) send_messages_and_wait_commit{chain=juno-1 tracking_id=create client}: wait_for_block_commits: retrieved 1 tx results after 6338ms id=juno-1
+SUCCESS CreateClient(
+    CreateClient(
+        Attributes {
+            client_id: ClientId(
+                "07-tendermint-326",
+            ),
+            client_type: Tendermint,
+            consensus_height: Height {
+                revision: 1,
+                height: 5844132,
+            },
+        },
+    ),
+)
+
+
+
+~/.hermes ❯❯❯ hermes create client --host-chain umee-1 --reference-chain juno-1                                                                                                           (base)  master ✚ ◼
+2023-03-28T15:02:16.367808Z  INFO ThreadId(01) using default configuration from '/Users/dima/.hermes/config.toml'
+2023-03-28T15:02:16.368199Z  INFO ThreadId(01) running Hermes v1.3.0
+2023-03-28T15:02:18.946033Z TRACE ThreadId(11) light client verification trusted=1-7588315 target=1-7588315
+2023-03-28T15:02:24.441871Z DEBUG ThreadId(21) send_messages_and_wait_commit{chain=umee-1 tracking_id=create client}: sending 1 messages as 1 batches to chain umee-1 in parallel
+2023-03-28T15:02:24.442004Z DEBUG ThreadId(21) send_messages_and_wait_commit{chain=umee-1 tracking_id=create client}:send_tx_with_account_sequence_retry{chain=umee-1 account.sequence=2}: max fee, for use in tx simulation: Fee { amount: "60001uumee", gas_limit: 600000 }
+2023-03-28T15:02:25.504720Z DEBUG ThreadId(21) send_messages_and_wait_commit{chain=umee-1 tracking_id=create client}:send_tx_with_account_sequence_retry{chain=umee-1 account.sequence=2}:estimate_gas: tx simulation successful, gas amount used: 95345
+2023-03-28T15:02:25.504827Z DEBUG ThreadId(21) send_messages_and_wait_commit{chain=umee-1 tracking_id=create client}:send_tx_with_account_sequence_retry{chain=umee-1 account.sequence=2}: send_tx: using 95345 gas, fee Fee { amount: "10488uumee", gas_limit: 104879 } id=umee-1
+2023-03-28T15:02:25.901230Z DEBUG ThreadId(21) send_messages_and_wait_commit{chain=umee-1 tracking_id=create client}:send_tx_with_account_sequence_retry{chain=umee-1 account.sequence=2}: gas estimation succeeded
+2023-03-28T15:02:25.901310Z DEBUG ThreadId(21) send_messages_and_wait_commit{chain=umee-1 tracking_id=create client}:send_tx_with_account_sequence_retry{chain=umee-1 account.sequence=2}: tx was successfully broadcasted, increasing account sequence number response=Response { code: Ok, data: b"", log: "[]", hash: Hash::Sha256(CF4FA12E9B9FF9B0E65F7CF8E10F7A5FC56FE725E258CEA1009C9E28ADD08787) } account.sequence.old=2 account.sequence.new=3
+2023-03-28T15:02:25.901405Z DEBUG ThreadId(21) send_messages_and_wait_commit{chain=umee-1 tracking_id=create client}: wait_for_block_commits: waiting for commit of tx hashes(s) CF4FA12E9B9FF9B0E65F7CF8E10F7A5FC56FE725E258CEA1009C9E28ADD08787 id=umee-1
+2023-03-28T15:02:30.378229Z TRACE ThreadId(21) send_messages_and_wait_commit{chain=umee-1 tracking_id=create client}: wait_for_block_commits: retrieved 1 tx results after 4476ms id=umee-1
+SUCCESS CreateClient(
+    CreateClient(
+        Attributes {
+            client_id: ClientId(
+                "07-tendermint-172",
+            ),
+            client_type: Tendermint,
+            consensus_height: Height {
+                revision: 1,
+                height: 7588315,
+            },
+        },
+    ),
+)
+
+
+2023-03-28T15:02:22.300870Z TRACE ThreadId(36) spawn:chain{chain=umee-1}:wallet{chain=umee-1}: wallet balance amount=2374966 denom=uumee account=umee1fn5aq70qktp9qta9h3mnvfanx2zm4r34c3vvkx
+2023-03-28T15:02:22.643380Z TRACE ThreadId(34) spawn:chain{chain=juno-1}:wallet{chain=juno-1}: wallet balance amount=1256182 denom=ujuno account=juno1rhuzvew52vl2mnvlqllddadr8pgm58jpgh7d6s
+2023-03-28T15:02:28.224566Z TRACE ThreadId(34) spawn:chain{chain=juno-1}:wallet{chain=juno-1}: wallet balance amount=1256182 denom=ujuno account=juno1rhuzvew52vl2mnvlqllddadr8pgm58jpgh7d6s
+2023-03-28T15:02:28.341241Z TRACE ThreadId(36) spawn:chain{chain=umee-1}:wallet{chain=umee-1}: wallet balance amount=2374966 denom=uumee account=umee1fn5aq70qktp9qta9h3mnvfanx2zm4r34c3vvkx
+2023-03-28T15:02:30.625720Z TRACE ThreadId(38) event_monitor{chain=umee-1}: extracted ibc_client event CreateClient(CreateClient { Attributes { client_id: 07-tendermint-172, client_type: ClientType(07-tendermint), consensus_height: 1-7588315 } })
+2023-03-28T15:02:32.100973Z TRACE ThreadId(37) event_monitor{chain=juno-1}:ibc_channel event: extracted AcknowledgePacket(AcknowledgePacket { packet: seq:805497, path:channel-0/transfer->channel-42/transfer, toh:1-8913779, tos:Timestamp(NoTimestamp))})
+2023-03-28T15:02:32.289987Z TRACE ThreadId(37) event_monitor{chain=juno-1}: extracted ibc_client event UpdateClient(UpdateClient { common: Attributes { client_id: 07-tendermint-0, client_type: ClientType(07-tendermint), consensus_height: 1-8913633 }, header: None })
+2023-03-28T15:02:33.879293Z TRACE ThreadId(34) spawn:chain{chain=juno-1}:wallet{chain=juno-1}: wallet balance amount=1256182 denom=ujuno account=juno1rhuzvew52vl2mnvlqllddadr8pgm58jpgh7d6s
+2023-03-28T15:02:34.341152Z TRACE ThreadId(36) spawn:chain{chain=umee-1}:wallet{chain=umee-1}: wallet balance amount=2364478 denom=uumee account=umee1fn5aq70qktp9qta9h3mnvfanx2zm4r34c3vvkx
+2023-03-28T15:02:39.562204Z TRACE ThreadId(34) spawn:chain{chain=juno-1}:wallet{chain=juno-1}: wallet balance amount=1256182 denom=ujuno account=juno1rhuzvew52vl2mnvlqllddadr8pgm58jpgh7d6s
+2023-03-28T15:02:40.411498Z TRACE ThreadId(36) spawn:chain{chain=umee-1}:wallet{chain=umee-1}: wallet balance amount=2364478 denom=uumee account=umee1fn5aq70qktp9qta9h3mnvfanx2zm4r34c3vvkx
+2023-03-28T15:02:45.450110Z TRACE ThreadId(34) spawn:chain{chain=juno-1}:wallet{chain=juno-1}: wallet balance amount=1256182 denom=ujuno account=juno1rhuzvew52vl2mnvlqllddadr8pgm58jpgh7d6s
+2023-03-28T15:02:46.455272Z TRACE ThreadId(36) spawn:chain{chain=umee-1}:wallet{chain=umee-1}: wallet balance amount=2364478 denom=uumee account=umee1fn5aq70qktp9qta9h3mnvfanx2zm4r34c3vvkx
+2023-03-28T15:02:51.061071Z TRACE ThreadId(34) spawn:chain{chain=juno-1}:wallet{chain=juno-1}: wallet balance amount=1256182 denom=ujuno account=juno1rhuzvew52vl2mnvlqllddadr8pgm58jpgh7d6s
+2023-03-28T15:02:52.471341Z TRACE ThreadId(36) spawn:chain{chain=umee-1}:wallet{chain=umee-1}: wallet balance amount=2364478 denom=uumee account=umee1fn5aq70qktp9qta9h3mnvfanx2zm4r34c3vvkx
+2023-03-28T15:02:55.042680Z TRACE ThreadId(37) event_monitor{chain=juno-1}:ibc_channel event: extracted SendPacket(SendPacket { packet: seq:805498, path:channel-0/transfer->channel-42/transfer, toh:1-8913784, tos:Timestamp(NoTimestamp)) })
+2023-03-28T15:02:55.042712Z TRACE ThreadId(37) event_monitor{chain=juno-1}:ibc_channel event: tx hash: E8DAE7B521824EA358B453B340880DAF9B9B44653210B7C94F87BB592F5D9C1D event="SendPacket"
+2023-03-28T15:02:56.635481Z TRACE ThreadId(34) spawn:chain{chain=juno-1}:wallet{chain=juno-1}: wallet balance amount=1256182 denom=ujuno account=juno1rhuzvew52vl2mnvlqllddadr8pgm58jpgh7d6s
+2023-03-28T15:02:58.491420Z TRACE ThreadId(36) spawn:chain{chain=umee-1}:wallet{chain=umee-1}: wallet balance amount=2364478 denom=uumee account=umee1fn5aq70qktp9qta9h3mnvfanx2zm4r34c3vvkx
+2023-03-28T15:03:01.693201Z TRACE ThreadId(39) worker.batch{chain=juno-1}:supervisor.handle_batch{chain=juno-1}:supervisor.process_batch{chain=juno-1}:control.channel{channel=Channel(ChainId { id: "juno-1", version: 1 }, PortId("transfer"), ChannelId("channel-0"))}: controlling permissions
+2023-03-28T15:03:01.693255Z TRACE ThreadId(39) worker.batch{chain=juno-1}:supervisor.handle_batch{chain=juno-1}:supervisor.process_batch{chain=juno-1}:control.channel{channel=Channel(ChainId { id: "juno-1", version: 1 }, PortId("transfer"), ChannelId("channel-0"))}: controlling permissions
+2023-03-28T15:03:01.693282Z DEBUG ThreadId(39) worker.batch{chain=juno-1}:supervisor.handle_batch{chain=juno-1}:supervisor.process_batch{chain=juno-1}: denying relaying on object packet::channel-0/transfer:juno-1->osmosis-1, caused by: spawn error: missing chain config for 'osmosis-1' in configuration file
+2023-03-28T15:03:01.693296Z TRACE ThreadId(39) worker.batch{chain=juno-1}:supervisor.handle_batch{chain=juno-1}:supervisor.process_batch{chain=juno-1}: skipping events for 'packet::channel-0/transfer:juno-1->osmosis-1'. reason: filtering is enabled and channel does not match any allowed channels
+2023-03-28T15:03:02.966089Z TRACE ThreadId(34) spawn:chain{chain=juno-1}:wallet{chain=juno-1}: wallet balance amount=1256182 denom=ujuno account=juno1rhuzvew52vl2mnvlqllddadr8pgm58jpgh7d6s
+2023-03-28T15:03:04.519633Z TRACE ThreadId(36) spawn:chain{chain=umee-1}:wallet{chain=umee-1}: wallet balance amount=2364478 denom=uumee account=umee1fn5aq70qktp9qta9h3mnvfanx2zm4r34c3vvkx
+2023-03-28T15:03:08.877713Z TRACE ThreadId(34) spawn:chain{chain=juno-1}:wallet{chain=juno-1}: wallet balance amount=1256182 denom=ujuno account=juno1rhuzvew52vl2mnvlqllddadr8pgm58jpgh7d6s
+2023-03-28T15:03:10.545465Z TRACE ThreadId(36) spawn:chain{chain=umee-1}:wallet{chain=umee-1}: wallet balance amount=2364478 denom=uumee account=umee1fn5aq70qktp9qta9h3mnvfanx2zm4r34c3vvkx
+
+
+
+~/.hermes ❯❯❯ hermes create client --host-chain juno-1 --reference-chain umee-1                                                                                                           (base)  master ✚ ◼
+2023-03-28T15:07:04.487922Z  INFO ThreadId(01) using default configuration from '/Users/dima/.hermes/config.toml'
+2023-03-28T15:07:04.488256Z  INFO ThreadId(01) running Hermes v1.3.0
+2023-03-28T15:07:07.921193Z TRACE ThreadId(11) light client verification trusted=1-5844213 target=1-5844213
+2023-03-28T15:07:11.016618Z DEBUG ThreadId(21) send_messages_and_wait_commit{chain=juno-1 tracking_id=create client}: sending 1 messages as 1 batches to chain juno-1 in parallel
+2023-03-28T15:07:11.016732Z DEBUG ThreadId(21) send_messages_and_wait_commit{chain=juno-1 tracking_id=create client}:send_tx_with_account_sequence_retry{chain=juno-1 account.sequence=10}: max fee, for use in tx simulation: Fee { amount: "60001ujuno", gas_limit: 600000 }
+2023-03-28T15:07:11.541090Z DEBUG ThreadId(21) send_messages_and_wait_commit{chain=juno-1 tracking_id=create client}:send_tx_with_account_sequence_retry{chain=juno-1 account.sequence=10}:estimate_gas: tx simulation successful, gas amount used: 93909
+2023-03-28T15:07:11.541149Z DEBUG ThreadId(21) send_messages_and_wait_commit{chain=juno-1 tracking_id=create client}:send_tx_with_account_sequence_retry{chain=juno-1 account.sequence=10}: send_tx: using 93909 gas, fee Fee { amount: "10330ujuno", gas_limit: 103299 } id=juno-1
+2023-03-28T15:07:12.316912Z DEBUG ThreadId(21) send_messages_and_wait_commit{chain=juno-1 tracking_id=create client}:send_tx_with_account_sequence_retry{chain=juno-1 account.sequence=10}: gas estimation succeeded
+2023-03-28T15:07:12.316987Z DEBUG ThreadId(21) send_messages_and_wait_commit{chain=juno-1 tracking_id=create client}:send_tx_with_account_sequence_retry{chain=juno-1 account.sequence=10}: tx was successfully broadcasted, increasing account sequence number response=Response { code: Ok, data: b"", log: "[]", hash: Hash::Sha256(CC5C58F0A3C0AF44F9AE2D9659F66D5470994DEAA40BDF8BF07DEDCDB62EF83E) } account.sequence.old=10 account.sequence.new=11
+2023-03-28T15:07:12.317061Z DEBUG ThreadId(21) send_messages_and_wait_commit{chain=juno-1 tracking_id=create client}: wait_for_block_commits: waiting for commit of tx hashes(s) CC5C58F0A3C0AF44F9AE2D9659F66D5470994DEAA40BDF8BF07DEDCDB62EF83E id=juno-1
+2023-03-28T15:07:15.076399Z TRACE ThreadId(21) send_messages_and_wait_commit{chain=juno-1 tracking_id=create client}: wait_for_block_commits: retrieved 1 tx results after 2759ms id=juno-1
+SUCCESS CreateClient(
+    CreateClient(
+        Attributes {
+            client_id: ClientId(
+                "07-tendermint-327",
+            ),
+            client_type: Tendermint,
+            consensus_height: Height {
+                revision: 1,
+                height: 5844213,
+            },
+        },
+    ),
+)
+
+
+
+2023-03-28T15:07:14.550384Z TRACE ThreadId(37) event_monitor{chain=juno-1}: extracted ibc_client event CreateClient(CreateClient { Attributes { client_id: 07-tendermint-327, client_type: ClientType(07-tendermint), consensus_height: 1-5844213 } })
